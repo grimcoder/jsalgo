@@ -36,7 +36,7 @@ describe ('sorting', function(){
 
         it('should sort array with negatives correctly [-1,2,3,3,4,1] to [-1,1,2,2,3,4]', function(){
             var arrayWithDups =  sorting.mergeSort([-1,2,3,3,4,1]);
-            console.log(arrayWithDups)
+
             assert.deepEqual(arrayWithDups, [-1,1,2,3,3,4], '[-1,2,3,3,4,1] to [-1,1,2,3,3,4]');
         });
 
