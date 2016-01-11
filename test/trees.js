@@ -7,8 +7,9 @@ var assert = require('chai').assert;
 describe ('binary trees', function(){
 
     it('should sort binary tree', function(){
+
         var tree = new Tree(new Tree(null, null, 0), new Tree(null, null,2), 1);
-        console.log(tree)
+
         assert.deepEqual(tree, tree.sort())
 
     });
