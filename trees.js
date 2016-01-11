@@ -7,4 +7,4 @@ var Tree = function(left, right, value){
         this.value = value
     }
 
-var tree = new Tree();
+var tree = new Tree(new Tree(null, null, 0), new Tree(null, null), 1);
