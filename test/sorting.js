@@ -20,16 +20,15 @@ describe ('sorting', function(){
             assert.deepEqual(emptyArray.length, 0, 'sorted empty array is empty')
         });
 
-        it('should sort array with duplicates correctly [1,2,3,3,4,1] to [1,1,2,3,3,4]', function(){
+        it('should sort array with duplicates correctly', function(){
             var arrayWithDups =  sorting.bubbleSort([1,2,3,3,4,1]);
             assert.deepEqual(arrayWithDups, [1,1,2,3,3,4], '[1,2,3,3,4,1] to [1,1,2,3,3,4]');
         });
 
-        it('should sort array with negatives correctly [-1,2,3,3,4,1] to [-1,1,2,2,3,4]', function(){
+        it('should sort array with negatives correctly', function(){
             var arrayWithDups =  sorting.bubbleSort([-1,2,3,3,4,1]);
-            assert.deepEqual(arrayWithDups, [-1,1,2,3,3,4], '[-1,2,3,3,4,1] to [-1,1,2,3,3,4]');
+            assert.deepEqual(arrayWithDups, [-1,1,2,3,3,4]);
         });
-
     });
 
     describe ('merge sort', function(){
@@ -37,7 +36,8 @@ describe ('sorting', function(){
         it('should sort array with negatives correctly [-1,2,3,3,4,1] to [-1,1,2,2,3,4]', function(){
             var arrayWithDups =  sorting.mergeSort([-1,2,3,3,4,1]);
 
-            assert.deepEqual(arrayWithDups, [-1,1,2,3,3,4], '[-1,2,3,3,4,1] to [-1,1,2,3,3,4]');
+            assert.deepEqual(arrayWithDups, [-1,2,3,3,4,1].sort(), '[-1,2,3,3,4,1] to [-1,1,2,3,3,4]');
+
         });
 
 

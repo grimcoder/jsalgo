@@ -35,7 +35,6 @@ var sorting = {
             }
         }
         return newarr;
-
     }
 
 
