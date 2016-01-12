@@ -9,4 +9,4 @@ cd jsalgo
 
 npm install
 
-mocha 
+gulp  
