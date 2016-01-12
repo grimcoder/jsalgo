@@ -11,19 +11,16 @@ describe('linked list', function(){
         var sortedNode = node.sort()
         var toMatch = new Node(1, new Node(2, new Node(3)))
 
-        console.log(sortedNode)
-
-        console.log(toMatch)
-
         assert.deepEqual(sortedNode,toMatch)
 
     })
+
 
     it('should reverse linked list', function(){
 
         var node = new Node(3, new Node(2, new Node(1, new Node(3))))
 
-        assert.deepEqual(node.sort(),new Node(3, new Node(1, new Node(2, new Node(3)))))
+        assert.deepEqual(node.reverse(),new Node(3, new Node(1, new Node(2, new Node(3)))))
 
     })
 

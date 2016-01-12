@@ -20,7 +20,6 @@ Node.prototype.sort = function(){
 
     var head = new Node()
     var current = head
-
     for(var x = 0; x < arr.length; x++){
         current.value = arr[x]
         if (x+1<arr.length){
@@ -30,14 +29,30 @@ Node.prototype.sort = function(){
     }
 
     return head
-
 }
 
-
+//reverse using array
 
 Node.prototype.reverse = function(){
-    return this;
-}
 
+    var current = this
+    var arr = []
+
+    while(current){
+        arr.push(current.value)
+        current = current.next
+    }
+    var head = new  Node(0)
+    current = head
+
+    while(arr.length>0){
+        current.value = arr.pop()
+        if (arr.length > 0){
+            current.next = new Node(0)
+            current = current.next
+        }
+    }
+    return head
+}
 
 module.exports = Node
