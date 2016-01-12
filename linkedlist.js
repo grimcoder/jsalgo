@@ -37,13 +37,14 @@ Node.prototype.sort2 = function(){
         var current = new Node(head.value)
         current.next = head2
         head2 = current
+
         while(current.next && current.value > current.next.value){
             var tmp = current.next.value
-
             current.next.value = current.value
             current.value = tmp
             current.next = current
         }
+
         head = head.next
     }
 

@@ -17,9 +17,9 @@ describe('linked list', function(){
 
     it('should sort linked list without array', function(){
 
-        var node = new Node(3, new Node(2, new Node(1)))
+        var node = new Node(3, new Node(2, new Node(1, new Node(1))))
         var sortedNode = node.sort2()
-        var toMatch = new Node(1, new Node(2, new Node(3)))
+        var toMatch =  new Node(1,new Node(1, new Node(2, new Node(3))))
 
         assert.deepEqual(sortedNode,toMatch)
 
